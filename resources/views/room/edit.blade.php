@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Create Room')
+@section('title', 'Edit Room')
 
 @section('content')
   @if ($errors->any())

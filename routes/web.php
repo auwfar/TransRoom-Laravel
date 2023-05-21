@@ -25,4 +25,11 @@ Route::middleware('auth')->group(function () {
 	Route::get('/room/destroy/{id}', [App\Http\Controllers\RoomController::class, 'destroy'])->name('room.destroy');
 	Route::post('/room/store', [App\Http\Controllers\RoomController::class, 'store'])->name('room.store');
 	Route::post('/room/update/{id}', [App\Http\Controllers\RoomController::class, 'update'])->name('room.update');
+
+	Route::get('/room_type', [App\Http\Controllers\RoomTypeController::class, 'index'])->name('room_type.index');
+    Route::get('/room_type/create', [App\Http\Controllers\RoomTypeController::class, 'create'])->name('room_type.create');
+	Route::get('/room_type/edit/{id}', [App\Http\Controllers\RoomTypeController::class, 'edit'])->name('room_type.edit');
+	Route::get('/room_type/destroy/{id}', [App\Http\Controllers\RoomTypeController::class, 'destroy'])->name('room_type.destroy');
+	Route::post('/room_type/store', [App\Http\Controllers\RoomTypeController::class, 'store'])->name('room_type.store');
+	Route::post('/room_type/update/{id}', [App\Http\Controllers\RoomTypeController::class, 'update'])->name('room_type.update');
 });
