@@ -16,8 +16,4 @@ class User extends Model implements Authenticatable {
     public function isAdmin() {
         return $this->is_admin;
     }
-
-    public function scopeAdmin($query) {
-        return $query->where('is_admin', true);
-    }
 }

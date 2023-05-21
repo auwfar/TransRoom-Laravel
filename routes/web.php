@@ -15,4 +15,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'login'])->name('login.post');
-Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+
+	Route::get('/room', [App\Http\Controllers\RoomController::class, 'index'])->name('room.index');
+    Route::get('/room/create', [App\Http\Controllers\RoomController::class, 'create'])->name('room.create');
+	Route::get('/room/edit/{id}', [App\Http\Controllers\RoomController::class, 'edit'])->name('room.edit');
+	Route::get('/room/destroy/{id}', [App\Http\Controllers\RoomController::class, 'destroy'])->name('room.destroy');
+	Route::post('/room/store', [App\Http\Controllers\RoomController::class, 'store'])->name('room.store');
+	Route::post('/room/update/{id}', [App\Http\Controllers\RoomController::class, 'update'])->name('room.update');
+});
