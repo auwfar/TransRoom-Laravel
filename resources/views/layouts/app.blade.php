@@ -68,6 +68,12 @@
                   </a>
                 </li>
               @endif
+                <li class="nav-item">
+                  <a href="{{ route('logout') }}" class="nav-link">
+                    <i class="nav-icon fa fa-door-open"></i>
+                    <p>Logout</p>
+                  </a>
+                </li>
             </ul>
           </nav>
           <!-- /.sidebar-menu -->

@@ -31,7 +31,7 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <input type="submit" value="Update Room" class="btn btn-success float-right">
+        <input type="submit" value="Update Room Type" class="btn btn-success float-right">
       </div>
     </div>
   </form>
