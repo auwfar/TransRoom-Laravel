@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TransRoom | @yield('title')</title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1.0/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/icheck-bootstrap/3.0.1/icheck-bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1.0/dist/css/adminlte.min.css"/>
   </head>
   <body class="hold-transition sidebar-mini">
     <!-- Site wrapper -->
@@ -46,22 +47,22 @@
                   </a>
                   <ul class="nav nav-treeview">
                     <li class="nav-item">
-                      <a href="{{ route('room.index') }}" class="nav-link">
+                      <a href="{{ route('room_type') }}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Rooms</p>
+                        <p>Room Types</p>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="{{ route('room_type.index') }}" class="nav-link">
+                      <a href="{{ route('room') }}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Room Types</p>
+                        <p>Rooms</p>
                       </a>
                     </li>
                   </ul>
                 </li>
               @else
                 <li class="nav-item">
-                  <a href="../widgets.html" class="nav-link">
+                  <a href="{{ route('booking') }}" class="nav-link">
                     <i class="nav-icon fas fa-id-card"></i>
                     <p>Booking Room</p>
                   </a>

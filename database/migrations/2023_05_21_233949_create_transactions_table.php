@@ -12,9 +12,14 @@ return new class extends Migration
      * @return void
      */
     public function up() {
-        Schema::create('room_types', function (Blueprint $table) {
+        Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->string('room_type');
+            $table->string('trans_code');
+            $table->date('trans_date');
+            $table->string('cust_name');
+            $table->integer('total_room_price');
+            $table->integer('total_extra_charge');
+            $table->integer('final_total');
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('room_types');
+        Schema::dropIfExists('transactions');
     }
 };
